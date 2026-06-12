@@ -3,6 +3,8 @@ build/
 sdkconfig
 sdkconfig.old
 sdkconfig.defaults.*.local
+_build.log
+*.log
 
 # Editor / OS
 .vscode/
