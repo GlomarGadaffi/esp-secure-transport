@@ -1,22 +1,23 @@
 # Third-Party Licenses
 
-GloSSH is MIT-licensed (see [LICENSE](LICENSE)). It vendors the following
-third-party source, each under permissive or public-domain terms. The full
-upstream license text is retained inside each vendored tree.
+GloSSH is MIT-licensed (see [LICENSE](LICENSE)). It vendors one third-party
+source tree, under public-domain terms. The full upstream license text is
+retained inside the vendored tree.
 
-| Component | Version | License | Upstream | In-tree license file |
-|-----------|---------|---------|----------|----------------------|
-| Dropbear SSH | 2020.81 | MIT-style | https://github.com/mkj/dropbear | `components/dropbear/dropbear/LICENSE` |
-| LibTomCrypt | bundled w/ dropbear | Public domain | https://github.com/libtom/libtomcrypt | `components/dropbear/dropbear/libtomcrypt/LICENSE` |
-| LibTomMath | bundled w/ dropbear | Public domain | https://github.com/libtom/libtommath | `components/dropbear/dropbear/libtommath/LICENSE` |
-| TinySSH | vendored | Public domain (CC0 fallback) | https://github.com/janmojzis/tinyssh | `components/tinyssh/tinyssh/LICENCE` |
+| Component | License | Upstream | In-tree license file |
+|-----------|---------|----------|----------------------|
+| TinySSH | Public domain (CC0 fallback) | https://github.com/janmojzis/tinyssh | `components/tinyssh/tinyssh/LICENCE` |
 
-None of the above are copyleft. There is no GPL, LGPL, or commercial-license
-obligation anywhere in this tree.
+TinySSH supplies all of GloSSH's cryptography (SSH server *and* the glo_mtls
+TLS 1.3 client): X25519, ChaCha20, Poly1305, SHA-256/512, Ed25519, sntrup761.
+None of it is copyleft — no GPL, LGPL, or commercial-license obligation.
+
+GloSSH's own MIT code adds an IETF ChaCha20 (RFC 8439) in
+`components/glo_mtls/src/glo_chacha20.c`.
 
 ## Provenance note
 
-These trees were vendored flat (copied source, no submodules) from a working
-ESP-IDF port. They may contain local ESP-IDF compatibility edits relative to
+TinySSH was vendored flat (copied source, no submodule) from a working
+ESP-IDF port, so it may contain local ESP-IDF compatibility edits relative to
 pristine upstream. To resync with upstream security patches, diff against the
-tagged upstream releases listed above.
+upstream repository above.
