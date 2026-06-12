@@ -2,6 +2,11 @@
 
 **Permissively-licensed secure transport for ESP-IDF — TinySSH all the way down.**
 
+> ⏸️ **Status:** the secure-channel core (crypto + TLS 1.3 key schedule + record
+> layer) is built and hardware-verified; the TLS handshake is not. The project
+> is **paused** in favor of [**GloSSHlet**](https://github.com/GlomarGadaffi/GloSSHlet)
+> for the SSH server. See [STATUS.md](STATUS.md) for the full picture and how to resume.
+
 GloSSH is a de-wolfed secure-transport stack for ESP32 / ESP-IDF. The embedded
 SSL/SSH options are awkward: wolfSSL/wolfSSH are GPLv2-or-commercial, and even
 the permissive default (mbedTLS) is Apache-2.0. GloSSH is **MIT / public-domain**
