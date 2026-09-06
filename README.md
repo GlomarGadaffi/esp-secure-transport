@@ -30,4 +30,3 @@ esp-secure-transport retains value if a genuinely pure zero-Apache stack is late
 - `components/tinyssh` — TinySSH port
 - `tools/` — auxiliary build/test scripts
 
-see STATUS.md for detailed technical breakdown.
